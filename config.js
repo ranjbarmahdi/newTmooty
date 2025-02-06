@@ -1,9 +1,6 @@
 import pgPromise from 'pg-promise';
-import dotenv from 'dotenv';
 
 const pgp = pgPromise();
-
-dotenv.config();
 
 class Database {
     constructor() {

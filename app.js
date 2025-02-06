@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import {
     getBrowser,
     getRandomElement,
@@ -22,7 +25,7 @@ async function main() {
     try {
         const proxyList = [''];
         const randomProxy = getRandomElement(proxyList);
-        browser = await getBrowser(randomProxy, false, false);
+        browser = await getBrowser(randomProxy, true, false);
 
         if (!fs.existsSync(IMAGES_DIR)) {
             fs.mkdirSync(IMAGES_DIR);
