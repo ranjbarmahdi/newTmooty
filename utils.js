@@ -418,7 +418,7 @@ export async function findMatchingCategories(courseName, categories) {
 
 // ============================================ findMinPrice
 export async function getPrice(page, xpaths, currency) {
-    const prices = [];
+    let prices = [];
     try {
         // Find Price
         for (const _xpath of xpaths) {
