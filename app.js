@@ -12,6 +12,7 @@ import {
 import { DOMAINS } from './enum/enums.js';
 import { faradars } from './modules/index.js';
 import { insertCourse, insertUrlToProblem, insertUrlToVisited, removeUrl } from './db.js';
+import fs from 'fs';
 
 const IMAGES_DIR = './images';
 const CATEGORIES_CSV_DIR = './categories.csv';
