@@ -7,7 +7,7 @@ import {
     goTo,
     getCheerio,
 } from '../utils.js';
-import { insertCourse, insertUrlToProblem, insertUrlToVisited, removeUrl } from './db.js';
+import { insertCourse, insertUrlToProblem, insertUrlToVisited, removeUrl } from '.././db.js';
 
 export default async function faradars(page, courseURL, imagesDIR, tmootyCategories) {
     let data = {};
