@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import csv from 'csv-parser';
 import { createObjectCsvWriter } from 'csv-writer';
-import cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 import OpenAI from 'openai';
 
 // Base URL for the API
