@@ -83,8 +83,8 @@ async function main() {
             }
         }
     } catch (error) {
-        await insertUrlToProblem(urlRow?.url);
         console.error('Error in main function:', error);
+        await insertUrlToProblem(urlRow?.url);
         if (page) await page.close();
         if (browser) await browser.close();
         process.exit(0);
