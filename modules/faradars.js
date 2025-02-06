@@ -6,6 +6,9 @@ import {
     waitForCss,
     goTo,
     getCheerio,
+    getPrice,
+    findMatchingCategories,
+    downloadImages,
 } from '../utils.js';
 import * as cheerio from 'cheerio';
 import { insertCourse, insertUrlToProblem, insertUrlToVisited, removeUrl } from '.././db.js';
