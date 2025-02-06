@@ -35,21 +35,20 @@ async function main() {
         }
 
         const categories = await readCsv(CATEGORIES_CSV_DIR);
-        console.log(categories);
+        const stringCategories = categories.map((cat) => cat.TermName).join('\n');
 
         while ((urlRow = await removeUrl()) !== null) {
             console.time('Execution Time');
 
-            console.log({ urlRow });
             if (urlRow?.url) {
                 page = await getPage(browser);
-                const domain = getDomain(price.url);
+                const domain = getDomain(urlRow.url);
                 console.log({ domain });
 
                 let data;
                 switch (domain) {
                     case DOMAINS.OTAGHAK:
-                        data = await faradars(page, urlRow.url, IMAGES_DIR, categories);
+                        data = await faradars(page, urlRow.url, IMAGES_DIR, stringCategories);
                         break;
                     default:
                         console.log('Not Found Domain:', domain);
