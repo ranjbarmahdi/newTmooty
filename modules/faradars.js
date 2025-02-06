@@ -19,7 +19,8 @@ export default async function faradars(page, courseURL, imagesDIR, tmootyCategor
         await goTo(page, courseURL, 180000);
         await delay(5000);
 
-        $ = await getCheerio(page);
+        let html = await page.content();
+        let $ = cheerio.load(html);
 
         // Generate uuidv4
         const uuid = uuidv4().replace(/-/g, '');
@@ -41,7 +42,8 @@ export default async function faradars(page, courseURL, imagesDIR, tmootyCategor
             }
         }
 
-        $ = await getCheerio();
+        html = await page.content();
+        $ = cheerio.load(html);
 
         data['headlines'] = $('#preview > div > div.border-\\[\\#E4E4E7\\] > div')
             .map((i, e) => {
