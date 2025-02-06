@@ -47,7 +47,7 @@ async function main() {
 
                 let data;
                 switch (domain) {
-                    case DOMAINS.OTAGHAK:
+                    case DOMAINS.FARADARS:
                         data = await faradars(page, urlRow.url, IMAGES_DIR, stringCategories);
                         break;
                     default:
