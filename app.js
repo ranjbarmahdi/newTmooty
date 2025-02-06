@@ -8,6 +8,7 @@ import {
     checkMemoryCpu,
     getDomain,
     getPage,
+    readCsv,
 } from './utils.js';
 import { DOMAINS } from './enum/enums.js';
 import { faradars } from './modules/index.js';
