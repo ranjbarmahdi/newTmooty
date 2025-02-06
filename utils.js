@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import puppeteer from 'puppeteer';
 import os from 'os';
 import fetch from 'node-fetch';
