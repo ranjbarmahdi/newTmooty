@@ -136,10 +136,13 @@ export default async function faradars(page, courseURL, imagesDIR, tmootyCategor
         );
 
         data['categories'] = machedCategories || '';
-        data['site_category'] = $('.category-tree__wrapper > a')
+        data['site_category'] = $('strong:contains(دسته‌بندی موضوعی):last')
+            .parent()
+            .parent()
+            .find('>a')
             .map((i, e) => $(e).text().trim())
             .get()
-            .join(' > ');
+            .join('\n');
         data['ai_category_offer'] = aiSuggestedCategories || '';
 
         data['price'] = '';
