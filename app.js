@@ -48,7 +48,7 @@ async function main() {
                 let data;
                 switch (domain) {
                     case DOMAINS.FARADARS:
-                        data = await faradars(page, urlRow.url, IMAGES_DIR, stringCategories);
+                        data = await faradars(page, urlRow.url, IMAGES_DIR, categories);
                         break;
                     default:
                         console.log('Not Found Domain:', domain);
