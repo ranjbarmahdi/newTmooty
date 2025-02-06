@@ -22,6 +22,7 @@ async function main() {
     let price;
     let browser;
 
+    let urlRow;
     try {
         const proxyList = [''];
         const randomProxy = getRandomElement(proxyList);
