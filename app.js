@@ -35,10 +35,12 @@ async function main() {
         }
 
         const categories = await readCsv(CATEGORIES_CSV_DIR);
+        console.log(categories);
 
         while ((urlRow = await removeUrl()) !== null) {
             console.time('Execution Time');
 
+            console.log({ urlRow });
             if (urlRow?.url) {
                 page = await getPage(browser);
                 const domain = getDomain(price.url);
